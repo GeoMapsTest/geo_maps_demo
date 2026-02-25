@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Map Catalog</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container" id="collectionMeta">
+      <h1>Map Catalog</h1>
+      <p class="small">Loading…</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search maps (title, quadrangle, date, series…)" />
+      <select id="seriesFilter"></select>
+      <select id="sort">
+        <option value="title">Sort: Title</option>
+        <option value="series">Sort: Series</option>
+        <option value="date">Sort: Date (normalized)</option>
+      </select>
+      <button id="clear" type="button">Clear</button>
+    </div>
+
+    <p id="status" class="small" style="margin-top:10px"></p>
+    <p class="small" id="count"></p>
+
+    <div class="grid" id="results"></div>
+
+    <div class="footer">
+      <div class="small">
+        Built as a static catalog for GitHub Pages. Data source: <code>docs/data/ead.xml</code>. Scans: <code>docs/scans/</code>.
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
