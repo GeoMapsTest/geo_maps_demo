@@ -5,10 +5,10 @@
     <filedesc>
       <titlestmt>
         <titleproper>AMS and USGS Missouri Topographic Maps (Cabinet 13D)</titleproper>
-        <author>Finding aid generated from an intake spreadsheet; edit as needed.</author>
+        <author>JZ</author>
       </titlestmt>
       <publicationstmt>
-        <publisher>University of Missouri Libraries (placeholder)</publisher>
+        <publisher>Geography Department, University of Missouri</publisher>
         <date>2026-02-16</date>
       </publicationstmt>
     </filedesc>
@@ -23,7 +23,7 @@
   <archdesc level="collection">
     <did>
       <repository>
-        <corpname>University of Missouri Libraries, Geography &amp; Map Room (edit as needed)</corpname>
+        <corpname>Geography Department, University of Missouri</corpname>
       </repository>
       <unittitle>AMS and USGS Missouri Topographic Maps</unittitle>
       <unitid>Cabinet 13D</unitid>
