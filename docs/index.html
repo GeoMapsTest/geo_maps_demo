@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Missouri Maps Catalog</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="hero">
+        <div>
+          <div id="collectionMeta">
+            <h1>Missouri Maps Catalog</h1>
+            <p class="small">Loading collection metadata…</p>
+          </div>
+          <div class="callout">
+            This version of the catalog combines five top-level series: <strong>AMS and USGS Missouri Topographic Maps</strong>, <strong>Columbia Map Cabinet</strong>, <strong>MO Human Geography Cabinet</strong>, <strong>Missouri Cities Cabinet</strong>, and <strong>Misc.</strong>
+          </div>
+          <div class="controls">
+            <input id="q" type="search" placeholder="Search titles, places, cabinet locations, or date text…" />
+            <select id="seriesFilter"></select>
+            <select id="sort">
+              <option value="title">Sort: Title</option>
+              <option value="series">Sort: Series</option>
+              <option value="date">Sort: Date</option>
+            </select>
+            <button id="clear" type="button">Clear</button>
+          </div>
+        </div>
+        <aside class="hero-note">
+          <h2>About this catalog</h2>
+          <p>This static site reads one merged EAD3 XML finding aid and turns it into a searchable web catalog.</p>
+          <p>The topographic maps now remain visible as a peer series to the four worksheet-derived cabinets, while nested subseries continue to be searchable at item level.</p>
+          <p class="small">Data source: <code>docs/data/ead.xml</code></p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="section-intro">
+      <div>
+        <h2>Browse map sheets</h2>
+        <p>Search across all five series and click any entry for item details, hierarchy, and scans when available.</p>
+      </div>
+      <p class="small" id="count"></p>
+    </div>
+
+    <p id="status" class="small" style="margin-top:10px"></p>
+    <div class="grid" id="results"></div>
+
+    <div class="footer">
+      <div class="small">Update the XML in <code>docs/data/ead.xml</code> to refresh the collection data. Add scans to <code>docs/scans/</code> or link them from the EAD with <code>&lt;dao href="..."/&gt;</code>.</div>
+    </div>
+  </main>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
