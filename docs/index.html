@@ -7,29 +7,49 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container">
+      <div class="topbar">
+        <p class="eyebrow">University of Missouri · Department of Geography</p>
+        <a class="top-link" href="map.html">Explore map details →</a>
+      </div>
+
       <div class="hero">
         <div>
           <div id="collectionMeta">
             <h1>Geography Map Collections: Columbia and Missouri Maps</h1>
-            <p class="small">Department of Geography, University of Missouri</p>
+            <p class="lead">A searchable digital catalog of historical sheets with archival metadata and high-resolution scans.</p>
           </div>
-          <div class="controls">
-            <input id="q" type="search" placeholder="Search titles, places, cabinet locations, or date text…" />
-            <select id="seriesFilter"></select>
-            <select id="sort">
-              <option value="title">Sort: Title</option>
-              <option value="series">Sort: Series</option>
-              <option value="date">Sort: Date</option>
-            </select>
-            <button id="clear" type="button">Clear</button>
+
+          <div class="controls-panel">
+            <p class="small">Find items by title, place, cabinet location, or date text.</p>
+            <div class="controls">
+              <input id="q" type="search" placeholder="Search titles, places, cabinet locations, or date text…" />
+              <select id="seriesFilter"></select>
+              <select id="sort">
+                <option value="title">Sort: Title</option>
+                <option value="series">Sort: Series</option>
+                <option value="date">Sort: Date</option>
+              </select>
+              <button id="clear" type="button">Clear</button>
+            </div>
           </div>
         </div>
+
         <aside class="hero-note">
           <h2>About this Collection</h2>
-          <p>This static site reads one merged EAD3 XML finding aid and turns it into a searchable web catalog.</p>
-          <p class="small">Data source: <code>docs/data/ead.xml</code>. Digitized by Jingzhou Zhang, SISLT, University of Missouri, Map Scanning Assistant: Andrew Hantak</p>
+          <p>This static site reads one merged EAD3 XML finding aid and turns it into an interactive web catalog.</p>
+          <div class="hero-stats">
+            <div>
+              <strong>5</strong>
+              <span>Collection series</span>
+            </div>
+            <div>
+              <strong>EAD3</strong>
+              <span>Metadata source</span>
+            </div>
+          </div>
+          <p class="small">Data source: <code>docs/data/ead.xml</code>. Digitized by Jingzhou Zhang (SISLT, University of Missouri) and map scanning assistant Andrew Hantak.</p>
         </aside>
       </div>
     </div>
@@ -39,7 +59,7 @@
     <div class="section-intro">
       <div>
         <h2>Browse map sheets</h2>
-        <p>Search across all five series and click any entry for item details, hierarchy, and scans when available.</p>
+        <p>Click any entry for item details, hierarchy context, and linked scan files when available.</p>
       </div>
       <p class="small" id="count"></p>
     </div>
@@ -48,7 +68,7 @@
     <div class="grid" id="results"></div>
 
     <div class="footer">
-      <div class="small">Update the XML in <code>docs/data/ead.xml</code> to refresh the collection data. Add scans to <code>docs/scans/</code> or link them from the EAD with <code>&lt;dao href="..."/&gt;</code>.</div>
+      <div class="small">To refresh catalog content, update <code>docs/data/ead.xml</code>. Add images to <code>docs/scans/</code> or link them in the EAD via <code>&lt;dao href="..."/&gt;</code>.</div>
     </div>
   </main>
 
