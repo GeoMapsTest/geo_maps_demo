@@ -5,14 +5,9 @@ function byTitle(a,b){ return (a.title||"").localeCompare(b.title||"", undefined
 
 function renderHeader(meta){
   const el = document.getElementById("collectionMeta");
-  const badges = [];
-  if(meta.collection.dateDisplay) badges.push(`<span class="badge">${esc(meta.collection.dateDisplay)}</span>`);
-  if(meta.collection.extent?.value) badges.push(`<span class="badge">${esc(meta.collection.extent.value)} ${esc(meta.collection.extent.unit || "")}</span>`);
-  if(meta.collection.unitid) badges.push(`<span class="badge">${esc(meta.collection.unitid)}</span>`);
   el.innerHTML = `
-    <h1>${esc(meta.collection.title || "Missouri Maps Catalog")}</h1>
-    <p>${badges.join(" ")} ${meta.collection.repository ? ` <span class="badge">${esc(meta.collection.repository)}</span>` : ""}</p>
-    <p>This merged front page now combines the original Missouri topographic maps with the four selected cabinet series in a single searchable catalog.</p>
+    <h1>Geography Map Collections: Columbia and Missouri Maps</h1>
+    <p class="small">Department of Geography, University of Missouri</p>
   `;
 }
 
